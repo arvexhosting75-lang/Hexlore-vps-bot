@@ -335,8 +335,8 @@ Contributions welcome! Please fork repository and submit pull requests.
 
 ## 💬 Support
 
-For support, open an issue on GitHub or contact the maintainer.
+For support, Join [Hexlore Hosting](https://discord.gg/9rVSPAVqRj) Discord Server.
 
 ## ⭐ Credits
 
-Built with [discord.py](https://github.com/Rapptz/discord.py), [Docker SDK](https://github.com/docker/docker-py), and [PyMongo](https://github.com/mongodb/mongo-python-driver)
+Built with ❤️ by Hexlore Devloper Team!
