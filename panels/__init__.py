@@ -1,0 +1,1 @@
+"""UI/UX panels package"""

@@ -1,0 +1,30 @@
+[Unit]
+Description=Hexlore VPS Bot - Discord VPS Hosting Bot
+After=network.target docker.service mongodb.service
+Wants=docker.service mongodb.service
+
+[Service]
+Type=simple
+User=vpsbot
+WorkingDirectory=/opt/hexlore-vps-bot
+Environment="PATH=/opt/hexlore-vps-bot/venv/bin"
+EnvironmentFile=/opt/hexlore-vps-bot/.env
+ExecStart=/opt/hexlore-vps-bot/venv/bin/python /opt/hexlore-vps-bot/bot.py
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Security options
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/hexlore-vps-bot/logs /opt/hexlore-vps-bot/backups /var/run/docker.sock
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=65536
+
+[Install]
+WantedBy=multi-user.target
